@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="print-job.html">Submit Print Job</a>
+    <a href="track-job.html">Track Job</a>
+    <a href="account.html">Account Management</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<form action="submit-contact.php" method="POST">
+    <p>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+    </p>
+    <p>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+    </p>
+    <p>
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    </p>
+    <p>
+    <input type="submit" value="Send Message">
+    </p>
+</form>
+
+<footer>
+    <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
