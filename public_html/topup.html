@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Top-Up</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Top-Up Account Balance</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="print-job.html">Submit Print Job</a>
+    <a href="track-job.html">Track Job</a>
+    <a href="account.html">Account Management</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="services.html">Our Services</a>
+    <a href="faq.html">FAQ</a>
+    <a href="topup.html">Top-Up</a>
+   
+</nav>
+
+<div class="content">
+    <h2>Top-Up Your Account</h2>
+    <form action="process-top-up.php" method="POST">
+        <label for="amount">Enter Top-Up Amount (in MYR):</label>
+        <input type="number" id="amount" name="amount" min="1" step="0.01" required>
+        
+        <input type="submit" value="Top-Up Now">
+    </form>
+</div>
+<br/>
+<footer>
+    <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
