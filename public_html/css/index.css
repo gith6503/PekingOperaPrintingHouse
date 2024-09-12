@@ -87,5 +87,19 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+th, td{
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
-
+th:nth-child(even),td:nth-child(even) {
+  background-color: #D6EEEE;
+}
