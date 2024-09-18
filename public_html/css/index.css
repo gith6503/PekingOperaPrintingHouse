@@ -101,5 +101,5 @@ th, td{
 }
 
 th:nth-child(even),td:nth-child(even) {
-  background-color: #D6EEEE;
+  background-color: pink;
 }
