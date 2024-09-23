@@ -26,9 +26,11 @@
 </nav>
  <img src="img/unnamed.jpg" alt="Opera" width="1500" height="300"/>
 <div class="account-details">
-  <h2>Your Account Details</h2>
-    <p>Name: John Doe</p>
-    <p>Remaining Print Quota: 50 pages</p>
+    <h2>Your Account Details</h2>
+    <p>Name: <span id="userName">John Doe</span></p>
+    <p>Remaining Print Quota: Nil</p>
+    <br/>
+    <input type="text" id="newName" placeholder="Enter new name">
     <button onclick="updateAccount()">Update Account</button>
 </div>
 
@@ -39,9 +41,6 @@
 <!-- Link to the external JavaScript file -->
 <script src="script.js"></script>
 
-<footer>
-    <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
