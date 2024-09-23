@@ -37,6 +37,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <form action="process-top-up.php" method="POST">
         <label for="amount">Enter Top-Up Amount (in MYR):</label>
         <input type="number" id="amount" name="amount" min="1" step="1" required>
+         <label for="amount">Enter your name:</label>
+       <input type="text" name="name" id="name" required>
+        
          <div class="payment-options">
             <label>
                 <input type="radio" name="payment_method" value="credit_card" required> Credit Card
