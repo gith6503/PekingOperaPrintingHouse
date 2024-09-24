@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Print Job</title>
-
      <link rel="stylesheet" href="css/index.css">
-
-   
+    
 </head>
 <body>
 
@@ -30,47 +23,59 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <a href="faq.html">FAQ</a>
     <a href="topup.html">Top-Up</a>
 </nav>
-     <img src="img/unnamed.jpg" alt="Opera" width="1500" height="300"/>
+
+<img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
-<form action="submit-job.php" method="POST" enctype="multipart/form-data">
+
+<form id="orderForm">
     <label for="file">Select File:</label>
     <br/>
     <br/>   
     <input type="file" id="file" name="file" required>
-<br/>
-<br/>
-    <label for="color">Print Type:</label>
-    <br/>
-    <br/>
-    <select id="color" name="color">
-        <br/>
-        <br/>
-        <option value="color">Color</option>
-        <br/>
-        <br/>
-        <option value="black_white">Black & White</option>
-    </select>
-<br/>
-<br/>
-    <label for="sides">Sides:</label>
-    <br/>
-    <br/>
-    <select id="sides" name="sides">
-        <br/>
-        <br/>
-        <option value="single">Single-Sided</option>
-        <br/>
-        <br/>
-        <option value="double">Double-Sided</option>
-    </select>
-<br/>
-<br/>
-    <input type="submit" value="Submit Job">
-</form>
-<br/>
+    <br/><br/>
+    <p>If your document is not selected, then this image will be printed.</p><!-- comment -->
+    <img src="img/unnamed16.jpg" alt="opera">
+   
+    <br/><br/>
+     <label for="color">Color:</label>
+        <select id="color" name="color">
+            <option value="black-and-white">Black and White</option>
+            <option value="color">Color</option>
+        </select><br><br>
+
+        <label for="sides">Print sides:</label>
+        <select id="sides" name="sides">
+            <option value="single">Single-sided</option>
+            <option value="double">Double-sided</option>
+        </select><br><br>
+
+        <label for="papertype">Paper type:</label>
+        <select id="papertype" name="papertype">
+            <option value="a4">A4</option>
+            <option value="a3">A3</option>
+        </select><br><br>
+        <p>If you want to print stickers, please select the sticker's shape. If not, please select Nil.</p>
+        <label for="shape">Shape:</label>
+        <select id="shape" name="shape">
+            <option value="square">Round</option>
+            <option value="rectangle">Square</option>
+             <option value="rectangle">Nil</option>
+        </select><br><br>   
+         <label for="Quantity1">Quantity:</label>
+            <!-- Use "-" and "+" buttons for quantity -->
+            <div class="quantity-input">
+               
+                <input id="Quantity1" class="Quantity" type="number" min="1" value="1">
+             
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script src="java/printjob.js"></script>
+
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
+
 
 </body>
 </html>
