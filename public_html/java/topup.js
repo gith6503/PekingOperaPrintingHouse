@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Allow form submission if all validations pass
-        alert('Payment details submitted successfully!');
+        alert('Payment details submitted successfully! If you top up by cash, please go to 7-eleven and collect your money!');
     });
 });
 
