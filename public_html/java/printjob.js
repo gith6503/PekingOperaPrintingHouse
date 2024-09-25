@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Prevent default form submission behavior
 
         // Get form field values
-        const fileInput = document.getElementById("file").files;
+     
         const color = document.getElementById("color").value;
         const sides = document.getElementById("sides").value;
         const paperType = document.getElementById("papertype").value;
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display order submission confirmation
         alert("Order submitted successfully! Your document will be ready after 3 days! ");
 
-        // Reset the form after submission
-        orderForm.reset();
+       
     }
 });
