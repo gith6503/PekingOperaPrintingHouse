@@ -14,7 +14,7 @@ body {
 
 header, nav, footer {
     text-align: center;
-    padding: 1em;
+    padding: 3em;
     background-color: red;
     color: black;
 }
