@@ -11,17 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const paperType = document.getElementById("papertype").value;
         const shape = document.getElementById("shape").value;
 
-        // Validate file input
-        if (fileInput.length === 0) {
-            alert("Please select a file to print.");
-            return;
-        }
+      
+       
 
         // Show a confirmation message (can be customized)
         if (confirm("Are you sure you want to submit this print order?")) {
             // Simulate form submission or file upload
             submitOrder({
-                file: fileInput[0].name,
+               
                 color: color,
                 sides: sides,
                 paperType: paperType,
