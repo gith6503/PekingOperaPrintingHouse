@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Print Job</title>
-
-     <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="css/index.css">
    
 </head>
 <body>
@@ -30,47 +23,76 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <a href="faq.html">FAQ</a>
     <a href="topup.html">Top-Up</a>
 </nav>
-     <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
+
+<img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
-<form action="submit-job.php" method="POST" enctype="multipart/form-data">
+
+<form id="orderForm">
     <label for="file">Select File:</label>
-    <br/>
-    <br/>   
+    <br/><br/>
     <input type="file" id="file" name="file" required>
-<br/>
-<br/>
+    <br/><br/>
+    <p>If your document is not selected, then this image will be printed:</p>
+    <img src="img/unnamed16.jpg" alt="Opera">
+    <br/>
+
     <label for="color">Print Type:</label>
     <br/>
-    <br/>
     <select id="color" name="color">
-        <br/>
-        <br/>
         <option value="color">Color</option>
-        <br/>
-        <br/>
         <option value="black_white">Black & White</option>
     </select>
-<br/>
-<br/>
+    <br/>
+
     <label for="sides">Sides:</label>
     <br/>
-    <br/>
     <select id="sides" name="sides">
-        <br/>
-        <br/>
         <option value="single">Single-Sided</option>
-        <br/>
-        <br/>
         <option value="double">Double-Sided</option>
     </select>
+    <br/><br/>
+     <select id="sides" name="sides">
+        <option value="single">A3</option>
+        <option value="double">A4</option>
+    </select>
+    <br/><br/>
+
+    <label for="papertype">Paper Type:</label>
+    <br/><br/>
+    <select id="papertype" name="papertype">
+        <option value="plain">Plain Paper</option>
+        <option value="sticker">Sticker Paper</option>
+    </select>
+    <br/><br/>
+ <p>If you do binding, please select the binding type. If not, please select Nil:</p>
+    <select id="shape" name="shape">
+        <option value="round">Comb Binding</option>
+        <option value="square">Tape Binding</option>
+           <option value="square">Wire Binding</option>
+        <option value="nil">Nil</option>
+    </select>
+    <br/><br/>
+    <p>If you print stickers, please select the sticker's shape. If not, please select Nil:</p>
+    <select id="shape" name="shape">
+        <option value="round">Round</option>
+        <option value="square">Square</option>
+        <option value="nil">Nil</option>
+    </select>
+    <br/><br/>
 <br/>
-<br/>
-    <input type="submit" value="Submit Job">
+    <button type="submit">Confirm Order</button>
+    <br/><br/>
 </form>
+
+<!-- Placeholder to display the result -->
+<p id="file"></p>
 <br/>
+
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
+
+ <script src="java/printjob.js"></script>
 
 </body>
 </html>
