@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Allow form submission if all validations pass
+        //
         alert('Payment details submitted successfully! If you top up by cash, please come to my (Rachel Ng) house as stated the location in the home page when you are available and transfer your payment to me (Rachel Ng)! Your amount balance will be updated once your payment is submitted!');
     });
 });
