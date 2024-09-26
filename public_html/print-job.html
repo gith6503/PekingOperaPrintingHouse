@@ -26,68 +26,121 @@
 
 <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
-
-<form id="orderForm">
-    <label for="file">Select File:</label>
-  
-    <input type="file" id="file" name="file" required>
-    <br/><br/>
-   
-    <label for="color">Print Type:</label>
-    <br/>
-    <select id="color" name="color">
-        <option value="color">Color</option>
-        <option value="black_white">Black & White</option>
-    </select>
-    <br/>
-    <br/>
-
-    <label for="sides">Sides:</label>
-    <br/>
-    <select id="sides" name="sides">
-        <option value="single">Single-Sided</option>
-        <option value="double">Double-Sided</option>
-    </select>
-    <br/><br/>
-     <select id="sides" name="sides">
-        <option value="single">A3</option>
-        <option value="double">A4</option>
-    </select>
-    <br/>
 <br/>
-    <label for="papertype">Paper Type:</label>
- <br/>
-    <select id="papertype" name="papertype">
-        <option value="plain">Plain Paper</option>
-        <option value="sticker">Sticker Paper</option>
-    </select>
-    <br/><br/>
- <p>If you do binding, please select the binding type. If not, please select Nil:</p>
-    <select id="shape" name="shape">
-        <option value="round">Comb Binding</option>
-        <option value="square">Tape Binding</option>
-           <option value="square">Wire Binding</option>
-        <option value="nil">Nil</option>
-    </select>
-    <br/><br/>
-    <p>If you print stickers, please select the sticker's shape. If not, please select Nil:</p>
-    <select id="shape" name="shape">
-        <option value="round">Round</option>
-        <option value="square">Square</option>
-        <option value="nil">Nil</option>
-    </select>
-    <br/><br/>
-    <label for="papertype">Quantity</label>
-     <input type="number" id="amount" name="amount" min="1" step="1" required>
-<br/><br/>
-    <button type="submit">Confirm Order</button>
-    <br/><br/>
-</form>
-
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File (required): </td>
+      <td><label for="file">Choose a file</label>
+      <input type="file" id="file" name="file" required>
+      </td>
+    </tr>
+    <tr>
+      <td>Print Type</td>
+      <td>
+        <select id="color" name="color">
+          <option value="color">Color</option>
+          <option value="black_white">Black & White</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Sides</td>
+      <td>
+        <select id="sides" name="sides">
+          <option value="single">Single-Sided</option>
+          <option value="double">Double-Sided</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Paper Size</td>
+      <td>
+        <select id="size" name="size">
+          <option value="A3">A3</option>
+          <option value="A4">A4</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Paper Type</td>
+      <td>
+        <select id="papertype" name="papertype">
+          <option value="plain">Plain Paper</option>
+          <option value="sticker">Sticker Paper</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Binding Type</td>
+      <td>
+             If you do binding, please select the binding type. If not, please select Nil:
+             <br/>
+        <select id="binding" name="binding">
+            If you do binding, please select the binding type. If not, please select Nil:
+            <br/>
+          <option value="comb">Comb Binding</option>
+          <option value="tape">Tape Binding</option>
+          <option value="wire">Wire Binding</option>
+          <option value="nil">Nil</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Sticker Shape</td>
+      <td>
+            If you print stickers, please select the sticker's shape. If not, please select Nil:
+            <br/>
+        <select id="shape" name="shape">
+             If you print stickers, please select the sticker's shape. If not, please select Nil:
+             <br/>
+          <option value="round">Round</option>
+          <option value="square">Square</option>
+          <option value="nil">Nil</option>
+        </select>
+      </td>
+    </tr>
+     <tr>
+      <td>Sticker Size</td>
+      <td>
+         If you print stickers, please select the sticker's size. If not, please select Nil:
+         <br/>
+        <select id="shape" name="shape">
+             If you print stickers, please select the sticker's size. If not, please select Nil:
+             <br/>
+          <option value="round">3cm</option>
+          <option value="square">4cm</option>
+           <option value="round">5cm</option>
+           <option value="square">6cm</option><!-- comment -->
+            <option value="round">7cm</option>
+          <option value="square">8cm</option>
+          <option value="nil">Nil</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Quantity (required): </td>
+      <td><input type="number" id="amount" name="amount" min="1" step="1" required></td>
+    </tr>
+  </tbody>
+</table>
+<br/>
 <!-- Placeholder to display the result -->
-<p id="file"></p>
-<br/>
+<form id="orderForm">
+    <!-- Other form elements here -->
 
+    <!-- Center Button -->
+    <div style="text-align: center;">
+        <button type="submit">Confirm Order</button>
+    </div>
+</form>
+<p id="result"></p>
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
@@ -95,4 +148,4 @@
  <script src="java/printjob.js"></script>
 
 </body>
-</html>
+</html> 
