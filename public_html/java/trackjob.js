@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Display a message (in real use-case, you would send this to a server to fetch the job status)
-        alert('Your Job is still Processing and will contact you once it is ready!');
+        alert('Your Job is pending!');
 
       
         
