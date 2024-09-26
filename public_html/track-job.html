@@ -27,14 +27,60 @@
 </nav>
     <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
-<form>
-    <label for="job_id">Enter Job ID:</label>
+<br/>
+ <div class="job-container">
+        <div class="job-header">
+            Job ID: #12345
+        </div>
+        <div>
+            Status: <span class="status pending">Pending</span>
+        </div>
+        <div>
+            Estimated Completion: <strong>3 days</strong>
+        </div>
+        <a href="#" class="refresh-btn">Refresh Status</a>
+    </div>
+<br/>
+    <!-- Job 2 -->
+    <div class="job-container">
+        <div class="job-header">
+            Job ID: #12346
+        </div>
+        <div>
+            Status: <span class="status in-progress">In Progress</span>
+        </div>
+        <div>
+            Estimated Completion: <strong>2 days</strong>
+        </div>
+        <a href="#" class="refresh-btn">Refresh Status</a>
+    </div>
     <br/>
-    <input type="text" id="job_id" name="job_id" required>
-<br/>
-<br/>
-    <input type="submit" value="Track Job">
-</form>
+ <div class="job-container">
+        <div class="job-header">
+            Job ID: #12346
+        </div>
+        <div>
+            Status: <span class="status in-progress">In Progress</span>
+        </div>
+        <div>
+            Estimated Completion: <strong>1 day</strong>
+        </div>
+        <a href="#" class="refresh-btn">Refresh Status</a>
+    </div>
+    <br/>
+    <!-- Job 3 -->
+    <div class="job-container">
+        <div class="job-header">
+            Job ID: #12347
+        </div>
+        <div>
+            Status: <span class="status completed">Completed</span>
+        </div>
+        <div>
+            Estimated Completion: <strong>Completed</strong>
+        </div>
+        <a href="#" class="refresh-btn">Refresh Status</a>
+    </div>
 
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
