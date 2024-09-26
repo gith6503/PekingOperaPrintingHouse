@@ -10,11 +10,22 @@ body {
     margin: 0;
     padding: 0;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+body{
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%; 
+}
+
 
 header, nav, footer {
     text-align: center;
-    padding: 1em;
+    padding: 3em;
     background-color: red;
     color: black;
 }
@@ -89,7 +100,13 @@ footer p {
 }
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 50%;
+  align: center;
+   margin: auto;
+  
+}
+table, th, td{
+     border: 1px solid;
 }
 
 th, td {
@@ -98,8 +115,16 @@ th, td {
 }
 
 tr:nth-child(even){background-color: pink}
+tr:nth-child(odd){background-color: white}
 
 th {
   background-color: red;
   color: white;
 }
+
+p{
+    text-align:center;
+}
+ .button-container {
+            text-align: center; /* Centers the content inside the container */
+        }
