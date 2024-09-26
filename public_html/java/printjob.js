@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Order details:", orderDetails);
         
         // Display order submission confirmation
-        alert("Order submitted successfully! Your printing Job Id will be displayed on the Track Job Page! Please check your printing status and your document will be ready after 3 days! ");
+        alert("Order submitted successfully! Your name and printing Job Id will be displayed on the Track Job Page! Please check your printing status and your document will be ready after 3 days! ");
 
        
     }
