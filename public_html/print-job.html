@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Print Job</title>
-     <link rel="stylesheet" href="css/index.css">
-    
+    <link rel="stylesheet" href="css/index.css">
+   
 </head>
 <body>
 
@@ -26,57 +26,136 @@
 
 <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
-
-<form id="orderForm">
-    <label for="file">Select File:</label>
-    <br/>
-    <br/>   
-    <input type="file" id="file" name="file" required>
-    <br/><br/>
-    <p>If your document is not selected, then this image will be printed.</p><!-- comment -->
-    <img src="img/unnamed16.jpg" alt="opera">
-   
-    <br/><br/>
-     <label for="color">Color:</label>
+<br/>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File (required): </td>
+      
+      <td>
+  
+          <label for="file">Choose a file</label>
+       
+      <input type="file" id="file" name="file" required>
+      </td>
+    </tr>
+    <tr>
+      <td>Print Type</td>
+      <td>
         <select id="color" name="color">
-            <option value="black-and-white">Black and White</option>
-            <option value="color">Color</option>
-        </select><br><br>
-
-        <label for="sides">Print sides:</label>
+          <option value="color">Color</option>
+          <option value="black_white">Black & White</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Sides</td>
+      <td>
         <select id="sides" name="sides">
-            <option value="single">Single-sided</option>
-            <option value="double">Double-sided</option>
-        </select><br><br>
-
-        <label for="papertype">Paper type:</label>
+          <option value="single">Single-Sided</option>
+          <option value="double">Double-Sided</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Paper Size</td>
+      <td>
+        <select id="size" name="size">
+          <option value="A3">A3</option>
+          <option value="A4">A4</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Paper Type</td>
+      <td>
         <select id="papertype" name="papertype">
-            <option value="a4">A4</option>
-            <option value="a3">A3</option>
-        </select><br><br>
-        <p>If you want to print stickers, please select the sticker's shape. If not, please select Nil.</p>
-        <label for="shape">Shape:</label>
+          <option value="plain">Plain Paper</option>
+          <option value="sticker">Sticker Paper</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Binding Type</td>
+      <td>
+             If you do binding, please select the binding type. If not, please select Nil:
+             <br/><br/>
+        <select id="binding" name="binding">
+            If you do binding, please select the binding type. If not, please select Nil:
+            <br/><br/>
+          <option value="comb">Comb Binding</option>
+          <option value="tape">Tape Binding</option>
+          <option value="wire">Wire Binding</option>
+          <option value="nil">Nil</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Sticker Shape</td>
+      <td>
+          If you print stickers, please select the sticker's shape. If not, please select Nil:
+          <br/><br/>
         <select id="shape" name="shape">
-            <option value="square">Round</option>
-            <option value="rectangle">Square</option>
-             <option value="rectangle">Nil</option>
-        </select><br><br>   
-         <label for="Quantity1">Quantity:</label>
-            <!-- Use "-" and "+" buttons for quantity -->
-            <div class="quantity-input">
-               
-                <input id="Quantity1" class="Quantity" type="number" min="1" value="1">
-             
-        <button type="submit">Submit Order</button>
-    </form>
+             If you print stickers, please select the sticker's shape. If not, please select Nil:
+             <br/><br/>
+          <option value="round">Round</option>
+          <option value="square">Square</option>
+          <option value="nil">Nil</option>
+        </select>
+      </td>
+    </tr>
+     <tr>
+      <td>Sticker Shape</td>
+      <td>
+          If you print stickers, please select the sticker's size. If not, please select Nil:
+          <br/><br/>
+        <select id="shape" name="shape">
+             If you print stickers, please select the sticker's size. If not, please select Nil:
+             <br/><br/>
+          <option value="round">3cm</option>
+          <option value="square">4cm</option>
+          <option value="nil">5cm</option>
+           <option value="round">6cm</option>
+          <option value="square">7cm</option>
+           <option value="round">8cm</option>
+              <option value="round">Nil</option>
+     
+         
+        </select>
+      </td>
+    </tr>
+    <br/>
+    <tr>
+      <td>Quantity (required): </td>
+      <br/>
+      <td>
+        <br/>
+          <input type="number" id="amount" name="amount" min="1" step="1" required></td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<!-- Placeholder to display the result -->
+<form id="orderForm">
+    <!-- Other form elements here -->
 
-    <script src="java/printjob.js"></script>
-
+    <!-- Center Button -->
+    <div style="text-align: center;">
+        <button type="submit">Confirm Order</button>
+    </div>
+</form>
+<p id="result"></p>
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
 
+ <script src="java/printjob.js"></script>
 
 </body>
 </html>
-
