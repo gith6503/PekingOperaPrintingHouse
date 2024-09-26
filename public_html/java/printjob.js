@@ -1,39 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const orderForm = document.getElementById("orderForm");
+// Get the form and attach an event listener for the submit event
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    // Prevent the form from being submitted immediately
+    event.preventDefault();
 
-    orderForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission behavior
+    // Collect form fields
+    const fileInput = document.getElementById('file');
+    const amountInput = document.getElementById('amount');
+    const bindingInput = document.getElementById('binding');
+    const shapeInput = document.getElementById('shape');
 
-        // Get form field values
-     
-        const color = document.getElementById("color").value;
-        const sides = document.getElementById("sides").value;
-        const paperType = document.getElementById("papertype").value;
-        const shape = document.getElementById("shape").value;
+    // Array to store error messages
+    let errorMessages = [];
 
-      
-       
+    // Validate File Input
+    if (!fileInput.value) {
+        errorMessages.push('Please select a file to upload.');
+    }
 
-        // Show a confirmation message (can be customized)
-        if (confirm("Are you sure you want to submit this print order?")) {
-            // Simulate form submission or file upload
-            submitOrder({
-               
-                color: color,
-                sides: sides,
-                paperType: paperType,
-                shape: shape,
-            });
-        }
-    });
+    // Validate Quantity (Amount) Input
+    if (amountInput.value <= 0) {
+        errorMessages.push('Please enter a valid quantity greater than 0.');
+    }
 
-    function submitOrder(orderDetails) {
-        // Simulate form submission or print order processing
-        console.log("Order details:", orderDetails);
-        
-        // Display order submission confirmation
-        alert("Order submitted successfully! Your name and printing Job Id will be displayed on the Track Job Page! Please check your printing status and your document will be ready after 3 days! ");
+    // Custom validation for Sticker Shape and Binding Type
+    if (shapeInput.value !== 'nil' && bindingInput.value === 'nil') {
+        errorMessages.push('If you are printing stickers, please select a binding type.');
+    }
 
-       
+    // If there are any error messages, display them
+    if (errorMessages.length > 0) {
+        alert(errorMessages.join('\n'));
+    } else {
+        // If validation passed, allow form submission
+        alert('Form submitted successfully! Please check your printing status on the track-job page and come to my house and collect your documents after 3 days!');
+        event.target.submit(); // Submit the form
     }
 });
