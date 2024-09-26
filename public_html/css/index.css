@@ -12,6 +12,11 @@ body {
     color: black;
 }
 
+  body {
+  background-image: url('img/background.jpg');
+}
+
+
 header, nav, footer {
     text-align: center;
     padding: 3em;
@@ -88,15 +93,26 @@ footer p {
     font-size: 0.9rem;
 }
 table {
-  border-collapse: collapse;
-  width: 100%;
-}
+ 
 
+   margin: auto; /* Center the table horizontally */
+      border-collapse: collapse; /* Collapse borders */
+      width: 80%; 
+      border: 1px solid;
+      padding: 1px solid;
+}
+table, th, td {
+  border: 1px solid;
+}
 th, td {
   text-align: left;
   padding: 8px;
 }
+p{
+    text-align: center;
+}
 
+tr:nth-child(odd){background-color: white}
 tr:nth-child(even){background-color: pink}
 
 th {
