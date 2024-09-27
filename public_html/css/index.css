@@ -124,7 +124,7 @@ table, th, td {
   border: 1px solid;
 }
 th, td {
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 p{
@@ -145,4 +145,7 @@ p{
 }
  .button-container {
             text-align: center; /* Centers the content inside the container */
+        }
+        input{
+            align: center;
         }
