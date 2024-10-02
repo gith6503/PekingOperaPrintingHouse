@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Top-Up</title>
-
-      <link rel="stylesheet" href="css/index.css">
- 
-  
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -29,18 +21,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <a href="services.html">Our Services</a>
     <a href="faq.html">FAQ</a>
     <a href="topup.html">Top-Up</a>
-   
 </nav>
- <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
+
+<img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
+
 <div class="content">
     <h2>Top-Up Your Account</h2>
-    <form>
+    <div id="alert-message" style="display:none; color: red;"></div> <!-- Alert message container -->
+    <form id="topup-form">
         <label for="amount">Enter Top-Up Amount (in MYR):</label>
         <input type="number" id="amount" name="amount" min="1" step="1" required>
-         <label for="amount">Enter your name:</label>
-       <input type="text" name="name" id="name" required>
         
-         <div class="payment-options">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <div class="payment-options">
             <label>
                 <input type="radio" name="payment_method" value="credit_card" required> Credit Card
             </label>
@@ -50,33 +45,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <label>
                 <input type="radio" name="payment_method" value="bank_transfer"> Bank Transfer
             </label>
-             <label>
+            <label>
                 <input type="radio" name="payment_method" value="Touch_&_Go"> Touch & Go
             </label>
-              <label>
+            <label>
                 <input type="radio" name="payment_method" value="Cash"> Cash
             </label>
-              <label>
+            <label>
                 <input type="radio" name="payment_method" value="Debit Card"> Debit Card
             </label>
         </div>
 
-     
         <!-- Email section (for PayPal) -->
         <div id="paypal-details" style="display: none;">
             <label for="paypal_email">PayPal Email:</label>
-         
             <input type="email" id="paypal_email" name="paypal_email" placeholder="email@example.com">
         </div>
-<br/>
+        <br/>
         <input type="submit" value="Submit Payment">
     </form>
 </div>
 
-       
-    </form>
-</div>
-<br/>
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
