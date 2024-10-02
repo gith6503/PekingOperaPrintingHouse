@@ -143,9 +143,40 @@ th {
 p{
     text-align:center;
 }
- .button-container {
-            text-align: center; /* Centers the content inside the container */
-        }
-        input{
-            align: center;
-        }
+.account-details {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container input, 
+.form-container button {
+    width: 100%;
+    max-width: 500px; /* Limit the width */
+    margin: 10px 0; /* Add spacing between rows */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e0a030;
+}
+h3, h2, h1{
+    text-align: center;
+}
