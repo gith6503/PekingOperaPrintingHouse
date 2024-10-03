@@ -25,34 +25,52 @@
     <a href="topup.html">Top-Up</a>
 </nav>
  <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
- <h1>Please update your account</h1>
-<div class="form-container">
-            <input type="text" id="newName" placeholder="Enter new name" required><br/>
+ 
+<div class="content">
+     <h1>Please update your account</h1>
+     <br/>
+            <h4>Enter Your name:</h4>
+            <input type="text" id="newName" placeholder="" required><br/>
             <br/>
-            <input type="date" id="newDOB" placeholder="Enter Date of Birth" required><br/>
+            <h4>Select Your date of birth:</h4>
+            <input type="date" id="newDOB" placeholder="" required><br/>
              <br/>
-            <input type="text" id="newSex" placeholder="Enter Sex" required><br/>
+             <h4>Select Sex:</h4><!-- comment --> 
+             <select id="size" name="size" required="">
+             <option value="M">M</option>
+             <option value="F">F</option>
+             </select>
+            <br/>
              <br/>
-            <input type="number" id="newAge" placeholder="Enter Age" required><br/>
+              <h4>How old are you?</h4>
+            <input type="number" id="newAge" min="0" step="1" placeholder="" required><br/>
              <br/>
-            <input type="text" id="newAddress" placeholder="Enter Address" required><br/>
+              <h4>What is your address?</h4>
+            <input type="text" id="newAddress" placeholder="" required><br/>
              <br/>
-            <input type="text" id="newIC" placeholder="Enter IC No" required><br/>
+              <h4>Enter your IC Number:</h4>
+            <input type="text" id="newIC" placeholder="" required><br/>
              <br/>
-            <input type="text" id="newWorkplace" placeholder="Enter School/Workplace" required><br/>
+              <h4>Enter your School/workplace:</h4>
+            <input type="text" id="newWorkplace" placeholder="" required><br/>
              <br/>
-            <input type="text" id="newReligion" placeholder="Enter Religion" required><br/>
+              <h4>What is your religion?</h4>
+            <input type="text" id="newReligion" placeholder="" required><br/>
              <br/>
-            <input type="number" id="newHeight" placeholder="Enter Height (cm)" required><br/>
+              <h4>Enter your height in cm:</h4>
+            <input type="number" id="newHeight" min="0" step="0.1" placeholder="" required><br/>
              <br/>
-            <input type="number" id="newWeight" placeholder="Enter Weight (kg)" required><br/>
+              <h4>Enter your weight in kg:</h4>
+            <input type="number" id="newWeight" min="0" step="0.1" placeholder="" required><br/>
              <br/>
-            <input type="text" id="newOccupation" placeholder="Enter Occupation" required><br/>
+              <h4>What is your occupation?</h4>
+            <input type="text" id="newOccupation" placeholder="" required><br/>
+            <br/>
+              <button onclick="updateAccount()">Update Account</button>
              <br/>
             <br/>
-            <div class="form-container">
-    <!-- Existing input fields go here -->
-    <button onclick="updateAccount()">Update Account</button>
+</div>
+           
 </div>
 <div id="accountDetails">
     <h2>Your Account Details</h2>
