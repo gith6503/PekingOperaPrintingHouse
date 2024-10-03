@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+ /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+body{
+  background-image: url("img/background.jpg");
+  //background-repeat: no-repeat;
+  //background-attachment: fixed; 
+//  background-size: 100% 100%; 
+}
+
+
+  body {
+  background-image: url('img/background.jpg');
+}
+
+
+header, nav, footer {
+    text-align: center;
+    padding: 3em;
+    background-color: red;
+    color: black;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid purple;
+}
+
+h1, h2 {
+    text-align: center;
+    color: black;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1rem;
+    color: black;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+      text-align: center;
+    
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 50px;
+    padding: 1em;
+    background-color: red;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  align: center;
+   margin: auto;
+  
+}
+table, th, td{
+     border: 1px solid;
+}
+
+   margin: auto; /* Center the table horizontally */
+      border-collapse: collapse; /* Collapse borders */
+      width: 80%; 
+      border: 1px solid;
+      padding: 1px solid;
+}
+table, th, td {
+  border: 1px solid;
+}
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+p{
+    text-align: center;
+}
+
+tr:nth-child(odd){background-color: white}
+tr:nth-child(even){background-color: pink}
+tr:nth-child(odd){background-color: white}
+
+th {
+  background-color: red;
+  color: white;
+}
+
+p{
+    text-align:center;
+}
+.account-details {
+    text-align: center;
+}
+
+
+
+button {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e0a030;
+}
+h3, h2, h1{
+    text-align: center;
+}
