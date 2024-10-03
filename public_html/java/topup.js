@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Allow form submission if all validations pass
-        alert('Payment details submitted successfully! If you top up by cash, please come to Peking Opera Printing house as stated in the location on the homepage when you are available and transfer your payment to me (Rachel Ng)! Your amount balance will be updated once your payment is submitted!');
+        alert('Payment details submitted successfully! If you top up by cash, please come to Peking Opera Printing house as stated in the location on the homepage when you are available and transfer your payment to the boss! Your amount balance will be updated once your payment is submitted!');
     });
 });
