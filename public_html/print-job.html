@@ -27,7 +27,7 @@
 <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
 <br/>
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Item</th>
@@ -42,7 +42,7 @@
   
           <p><label for="file">Choose a file</label>
        
-              <input type="file" id="file" name="file" required></p>
+              <input type="file" id="file" name="file" accept=".jpg,.png,.pdf" required></p>
       </td>
     </tr>
     <tr>
@@ -115,7 +115,7 @@
       <td>
           If you print stickers, please select the sticker's size. If not, please select Nil:
           <br/><br/>
-        <select id="shape" name="shape">
+        <select id="size" name="size">
              If you print stickers, please select the sticker's size. If not, please select Nil:
              <br/><br/>
           <option value="round">3cm</option>
@@ -146,7 +146,7 @@
     <!-- Other form elements here -->
 
     <!-- Center Button -->
-    <div style="text-align: center;">
+    <div style="text-align: center;" colspan="2" class="form-container">
         <button type="submit">Confirm Order</button>
     </div>
 </form>
