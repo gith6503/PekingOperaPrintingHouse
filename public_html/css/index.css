@@ -51,6 +51,7 @@ nav a:hover {
     padding: 20px;
     background-color: pink;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid purple;
 }
 
 h1, h2 {
@@ -85,10 +86,13 @@ input[type="submit"] {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 input[type="submit"]:hover {
     background-color: red;
+      text-align: center;
+    
 }
 
 /* Footer Styling */
@@ -147,22 +151,7 @@ p{
     text-align: center;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.form-container input, 
-.form-container button {
-    width: 100%;
-    max-width: 500px; /* Limit the width */
-    margin: 10px 0; /* Add spacing between rows */
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
 
 button {
     background-color: red;
