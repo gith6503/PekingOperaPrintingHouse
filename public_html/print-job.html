@@ -27,7 +27,7 @@
 <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
 <br/>
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Item</th>
@@ -37,8 +37,12 @@
   <tbody>
     <tr>
       <td>File (required): </td>
-      <td><label for="file">Choose a file</label>
-      <input type="file" id="file" name="file" required>
+      
+      <td>
+  
+          <p><label for="file">Choose a file</label>
+       
+              <input type="file" id="file" name="file" accept=".jpg,.png,.pdf" required></p>
       </td>
     </tr>
     <tr>
@@ -81,10 +85,10 @@
       <td>Binding Type</td>
       <td>
              If you do binding, please select the binding type. If not, please select Nil:
-             <br/>
+             <br/><br/>
         <select id="binding" name="binding">
             If you do binding, please select the binding type. If not, please select Nil:
-            <br/>
+            <br/><br/>
           <option value="comb">Comb Binding</option>
           <option value="tape">Tape Binding</option>
           <option value="wire">Wire Binding</option>
@@ -95,11 +99,11 @@
     <tr>
       <td>Sticker Shape</td>
       <td>
-            If you print stickers, please select the sticker's shape. If not, please select Nil:
-            <br/>
+          If you print stickers, please select the sticker's shape. If not, please select Nil:
+          <br/><br/>
         <select id="shape" name="shape">
              If you print stickers, please select the sticker's shape. If not, please select Nil:
-             <br/>
+             <br/><br/>
           <option value="round">Round</option>
           <option value="square">Square</option>
           <option value="nil">Nil</option>
@@ -109,24 +113,30 @@
      <tr>
       <td>Sticker Size</td>
       <td>
-         If you print stickers, please select the sticker's size. If not, please select Nil:
-         <br/>
-        <select id="shape" name="shape">
+          If you print stickers, please select the sticker's size. If not, please select Nil:
+          <br/><br/>
+        <select id="size" name="size">
              If you print stickers, please select the sticker's size. If not, please select Nil:
-             <br/>
+             <br/><br/>
           <option value="round">3cm</option>
           <option value="square">4cm</option>
-           <option value="round">5cm</option>
-           <option value="square">6cm</option><!-- comment -->
-            <option value="round">7cm</option>
-          <option value="square">8cm</option>
-          <option value="nil">Nil</option>
+          <option value="nil">5cm</option>
+           <option value="round">6cm</option>
+          <option value="square">7cm</option>
+           <option value="round">8cm</option>
+              <option value="round">Nil</option>
+     
+         
         </select>
       </td>
     </tr>
+    <br/>
     <tr>
       <td>Quantity (required): </td>
-      <td><input type="number" id="amount" name="amount" min="1" step="1" required></td>
+      <br/>
+      <td>
+        <br/>
+          <input type="number" id="amount" name="amount" min="1" step="1" required></td>
     </tr>
   </tbody>
 </table>
@@ -136,7 +146,7 @@
     <!-- Other form elements here -->
 
     <!-- Center Button -->
-    <div style="text-align: center;">
+    <div style="text-align: center;" colspan="2" class="form-container">
         <button type="submit">Confirm Order</button>
     </div>
 </form>
@@ -148,4 +158,4 @@
  <script src="java/printjob.js"></script>
 
 </body>
-</html> 
+</html>
