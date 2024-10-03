@@ -1,113 +1,51 @@
-// Show notification
-const notification = document.getElementById('notification');
-notification.style.display = 'block';
+// account.js
 
-// Hide notification after 3 seconds
-setTimeout(() => {
-    notification.style.display = 'none';
-}, 3000);
-
-// Function to update account details
 function updateAccount() {
-    // Get the new details entered by the user
-    const newName = document.getElementById('newName').value;
-    const newDOB = document.getElementById('newDOB').value;
-    const newSex = document.getElementById('newSex').value;
-    const newAge = document.getElementById('newAge').value;
-    const newAddress = document.getElementById('newAddress').value;
-    const newIC = document.getElementById('newIC').value;
-    const newWorkplace = document.getElementById('newWorkplace').value;
-    const newReligion = document.getElementById('newReligion').value;
-    const newHeight = document.getElementById('newHeight').value;
-    const newWeight = document.getElementById('newWeight').value;
-    const newOccupation = document.getElementById('newOccupation').value;
-
-    // Validate input fields
-    if (newName.trim() === '') {
-        alert('Please enter a valid name.');
-        return;
-    }
-     if (newDOB.trim() === '') {
-        alert('Please enter date of birth.');
-        return;
-    }
-    if (newSex.trim() === '') {
-        alert('Please enter a valid sex.');
-        return;
-    }
-    if (newAge.trim() === '') {
-        alert('Please enter your age.');
-        return;
-    }
-    if (newAddress.trim() === '') {
-        alert('Please enter a valid address.');
-        return;
-    }
-    if (newIC.trim() === '') {
-        alert('Please enter your IC Number.');
-        return;
-    }
-    if (newWorkplace.trim() === '') {
-        alert('Please enter your workplace.');
-        return;
-    }
-    if (newReligion.trim() === '') {
-        alert('Please enter your religion.');
-        return;
-    }
-    if (newHeight.trim() === '') {
-        alert('Please enter your height.');
-        return;
-    }
-    if (newWeight.trim() === '') {
-        alert('Please enter your weight.');
-        return;
-    }
-    if (newOccupation.trim() === '') {
-        alert('Please enter your occupation.');
-        return;
-    }
-    // Add validation for other fields...
-
-    // Save all details to local storage
-    localStorage.setItem('userName', newName);
-    localStorage.setItem('userDOB', newDOB);
-    localStorage.setItem('userSex', newSex);
-    localStorage.setItem('userAge', newAge);
-    localStorage.setItem('userAddress', newAddress);
-    localStorage.setItem('userIC', newIC);
-    localStorage.setItem('userWorkplace', newWorkplace);
-    localStorage.setItem('userReligion', newReligion);
-    localStorage.setItem('userHeight', newHeight);
-    localStorage.setItem('userWeight', newWeight);
-    localStorage.setItem('userOccupation', newOccupation);
-
-    // Display the updated details on the webpage
-    document.getElementById('displayName').innerText = `${newName}`;
-    document.getElementById('displayDOB').innerText = ` ${newDOB}`;
-    document.getElementById('displaySex').innerText = ` ${newSex}`;
-    document.getElementById('displayAge').innerText = `${newAge}`;
-    document.getElementById('displayAddress').innerText = `${newAddress}`;
-    document.getElementById('displayIC').innerText = `${newIC}`;
-    document.getElementById('displayWorkplace').innerText = `${newWorkplace}`;
-    document.getElementById('displayReligion').innerText = `${newReligion}`;
-    document.getElementById('displayHeight').innerText = ` ${newHeight} `;
-    document.getElementById('displayWeight').innerText = ` ${newWeight} `;
-    document.getElementById('displayOccupation').innerText = ` ${newOccupation}`;
+    // Get the input values
+    let name = document.getElementById("newName").value.trim();
+    let dob = document.getElementById("newDOB").value;
+    let sex = document.getElementById("size").value;
+    let age = document.getElementById("newAge").value.trim();
+    let address = document.getElementById("newAddress").value.trim();
+    let icNumber = document.getElementById("newIC").value.trim();
+    let workplace = document.getElementById("newWorkplace").value.trim();
+    let religion = document.getElementById("newReligion").value.trim();
+    let height = document.getElementById("newHeight").value.trim();
+    let weight = document.getElementById("newWeight").value.trim();
+    let occupation = document.getElementById("newOccupation").value.trim();
     
-    // Display success alert
-    alert('Account updated successfully!');
+    // Perform validation for empty fields
+    if (!name || !dob || !age || !address || !icNumber || !workplace || !religion || !height || !weight || !occupation) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+    
+    // Validate age, height, and weight to ensure they are numbers and reasonable values
+    if (isNaN(age) || age <= 0 || age > 120) {
+        alert("Please enter a valid age.");
+        return;
+    }
+    if (isNaN(height) || height <= 0) {
+        alert("Please enter a valid height in cm.");
+        return;
+    }
+    if (isNaN(weight) || weight <= 0) {
+        alert("Please enter a valid weight in kg.");
+        return;
+    }
 
-    // Optionally clear the input fields after updating
-    document.getElementById('newName').value = '';
-    document.getElementById('newDOB').value = '';
-    document.getElementById('newSex').value = '';
-    document.getElementById('newAge').value = '';
-    document.getElementById('newAddress').value = '';
-    document.getElementById('newIC').value = '';
-    document.getElementById('newWorkplace').value = '';
-    document.getElementById('newReligion').value = '';
-    document.getElementById('newHeight').value = '';
-    document.getElementById('newWeight').value = '';
-    document.getElementById('newOccupation').value = '';
+    // Update the displayed account details
+    document.getElementById("displayName").innerText = name;
+    document.getElementById("displayDOB").innerText = dob;
+    document.getElementById("displaySex").innerText = sex;
+    document.getElementById("displayAge").innerText = age;
+    document.getElementById("displayAddress").innerText = address;
+    document.getElementById("displayIC").innerText = icNumber;
+    document.getElementById("displayWorkplace").innerText = workplace;
+    document.getElementById("displayReligion").innerText = religion;
+    document.getElementById("displayHeight").innerText = height;
+    document.getElementById("displayWeight").innerText = weight;
+    document.getElementById("displayOccupation").innerText = occupation;
+
+    alert("Account updated successfully! Please check your account details below!");
 }
