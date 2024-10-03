@@ -1,39 +1,56 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
- */
+document.addEventListener('DOMContentLoaded', function() {
+    // Get form element
+    const contactForm = document.querySelector('form');
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".form-container form");
-    
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the default form submission
+    // Add event listener to handle form submission
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
 
-        // Get the values from the form fields
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value;
+        // Get form field values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            alert("Please fill in all fields.");
-            return;
+        // Initialize an empty array to hold error messages
+        let errorMessages = [];
+
+        // Validate name (required)
+        if (name === '') {
+            errorMessages.push('Please enter your name.');
         }
 
-        // Example of what you could do with the form data:
-        // For demonstration, we are logging it to the console
-        console.log("Form submitted successfully!");
-        console.log(`Name: ${name}`);
-        console.log(`Email: ${email}`);
-        console.log(`Subject: ${subject}`);
-        console.log(`Message: ${message}`);
+        // Validate email (required and basic email format)
+        if (email === '') {
+            errorMessages.push('Please enter your email address.');
+        } else if (!validateEmail(email)) {
+            errorMessages.push('Please enter a valid email address.');
+        }
 
-        // Display success message
-        alert("Your message has been sent successfully! Please wait for the boss to reply! ");
+        // Validate subject (required)
+        if (subject === '') {
+            errorMessages.push('Please enter a subject.');
+        }
 
-        // Optionally clear the form fields after submission
-        form.reset();
+        // Validate message (required)
+        if (message === '') {
+            errorMessages.push('Please enter your message.');
+        }
+
+        // Display error messages if any, or submit the form
+        if (errorMessages.length > 0) {
+            alert(errorMessages.join('\n'));
+        } else {
+            alert('Your message has been sent successfully! Please wait for the boss to reply!');
+            contactForm.reset(); // Clear the form
+        }
     });
+
+    // Function to validate email format
+    function validateEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
 });
+
 
