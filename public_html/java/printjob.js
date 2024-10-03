@@ -32,9 +32,15 @@
 
             // Custom validation for Sticker Shape and Binding Type
          // Check if binding is 'Nil' but sticker shape or size is selected
-   
+    if (binding === 'nil' && (shape !== 'nil' || size !== 'nil')) {
+        errorMessages.push('If you are not selecting a binding type, you cannot choose a sticker shape or size.');
+    }
 
-  
+    // Additional validation if necessary (e.g., checking if shape or size is valid when binding is not Nil)
+    if (binding !== 'nil' && (shape === 'nil' || size === 'nil')) {
+        errorMessages.push('If you are selecting a binding type, you must select both a sticker shape and size.');
+    }
+
 
             // If there are any error messages, display them
             if (errorMessages.length > 0) {
