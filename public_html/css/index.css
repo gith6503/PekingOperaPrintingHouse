@@ -13,7 +13,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 body{
   background-image: url("img/background.jpg");
@@ -107,30 +109,25 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
-table {
-  border-collapse: collapse;
-  width: 80%;
-  align: center;
-   margin: auto;
-  
-}
-table, th, td{
-     border: 1px solid;
-}
 
+table, tr, th, td{
+     border: 1px solid black;
+      text-align: center;
    margin: auto; /* Center the table horizontally */
       border-collapse: collapse; /* Collapse borders */
-      width: 80%; 
-      border: 1px solid;
-      padding: 1px solid;
+      width: 70%;     
+      padding: 8px solid;
+      height: 100px;
 }
-table, th, td {
-  border: 1px solid;
+th, td{
+    width:10%;
+    height:60px;
+    
 }
-th, td {
-  text-align: center;
-  padding: 8px;
+tr{
+     height:20px;
 }
+
 p{
     text-align: center;
 }
@@ -142,6 +139,8 @@ tr:nth-child(odd){background-color: white}
 th {
   background-color: red;
   color: white;
+  width:10%;
+  height: 10%;
 }
 
 p{
