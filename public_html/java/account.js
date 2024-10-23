@@ -12,10 +12,12 @@ function updateAccount() {
     let religion = document.getElementById("newReligion").value.trim();
     let height = document.getElementById("newHeight").value.trim();
     let weight = document.getElementById("newWeight").value.trim();
+     let SugarLevel = document.getElementById("newSugarLevel").value.trim();
+     let PressureLevel = document.getElementById("newPressureLevel").value.trim();
     let occupation = document.getElementById("newOccupation").value.trim();
     
     // Perform validation for empty fields
-    if (!name || !dob || !age || !address || !icNumber || !workplace || !religion || !height || !weight || !occupation) {
+    if (!name || !dob || !age || !address || !icNumber || !workplace || !religion || !height || !weight || !SugarLevel || !PressureLevel || !occupation) {
         alert("Please fill in all required fields.");
         return;
     }
@@ -45,6 +47,8 @@ function updateAccount() {
     document.getElementById("displayReligion").innerText = religion;
     document.getElementById("displayHeight").innerText = height;
     document.getElementById("displayWeight").innerText = weight;
+    document.getElementById("displaySugarLevel").innerText = SugarLevel;
+    document.getElementById("displayPressureLevel").innerText = PressureLevel;
     document.getElementById("displayOccupation").innerText = occupation;
 
     alert("Account updated successfully! Please check your account details below!");
