@@ -40,5 +40,3 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
                 event.target.submit(); // Submit the form
             }
         });
-        
-        //Form submitted successfully! Please check your printing status on the track-job page and come to my house and collect your documents after 3 days!
