@@ -1,4 +1,4 @@
- document.getElementById('orderForm').addEventListener('submit', function(event) {
+document.getElementById('orderForm').addEventListener('submit', function(event) {
             // Prevent the form from being submitted immediately
             event.preventDefault();
 
@@ -30,7 +30,6 @@
                 errorMessages.push('Please enter a valid quantity greater than 0.');
             }
 
-          
 
             // If there are any error messages, display them
             if (errorMessages.length > 0) {
