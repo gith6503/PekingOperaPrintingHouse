@@ -32,7 +32,6 @@
 
           
 
-
             // If there are any error messages, display them
             if (errorMessages.length > 0) {
                 alert(errorMessages.join('\n'));
