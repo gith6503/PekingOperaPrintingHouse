@@ -14,15 +14,24 @@
     <h1>Account Management</h1>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="print-job.html">Submit Print Job</a>
-    <a href="track-job.html">Track Job</a>
-    <a href="account.html">Account Management</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="services.html">Our Services</a>
-    <a href="faq.html">FAQ</a>
-    <a href="topup.html">Top-Up</a>
+<nav role="navigation" aria-label="Main Navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <br/>
+        <li><a href="print-job.html">Submit Print Job</a></li>
+        <br/>
+        <li><a href="track-job.html">Track Job</a></li>
+         <br/>
+        <li><a href="account.html">Account Management</a></li>
+         <br/>
+        <li><a href="contact.html">Contact Us</a></li>
+         <br/>
+        <li><a href="services.html">Our Services</a></li>
+         <br/>
+        <li><a href="faq.html">FAQ</a></li>
+         <br/>
+        <li><a href="topup.html">Top-Up</a></li>
+    </ul>
 </nav>
  <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
  
@@ -62,6 +71,11 @@
              <br/>
               <h4>Enter your weight in kg:</h4>
             <input type="number" id="newWeight" min="0" step="0.1" placeholder="" required><br/>
+            <h4>What is your blood sugar level in mmol/L:</h4>
+            <input type="number" id="newSugarLevel" min="0" step="0.1" placeholder="" required><br/>
+             <br/>
+             <h4>What is your blood pressure level in mm/Hg:</h4>
+            <input type="number" id="newPressureLevel" min="0" step="1" placeholder="" required><br/>
              <br/>
               <h4>What is your occupation?</h4>
             <input type="text" id="newOccupation" placeholder="" required><br/>
@@ -115,6 +129,14 @@
         <tr>
             <td>Weight (kg)</td>
             <td id="displayWeight">Nil</td>
+        </tr>
+        <tr>
+        <td>Blood Sugar Level (mmol/L)</td><!-- comment -->
+        <td id="displaySugarLevel">Nil</td>
+        </tr><!-- comment -->
+        <tr>
+        <td>Blood Pressure Level (mm/Hg)</td><!-- comment -->
+        <td id="displayPressureLevel">Nil</td>
         </tr>
         <tr>
             <td>Occupation</td>
