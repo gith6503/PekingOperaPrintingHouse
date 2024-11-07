@@ -79,6 +79,35 @@ class Services {
             $this->service_name = $row['service_name'];
         }
     }
+    function update(){
+  
+    // update query
+    $query = "UPDATE
+                " . $this->table_name . "
+            SET
+                service_name = :service_name
+               
+            WHERE
+                service_no = :service_no";
+  
+    // prepare query statement
+    $stmt = $this->conn->prepare($query);
+  
+    // sanitize
+    $this->service_no=htmlspecialchars(strip_tags($this->service_no));
+    $this->service_name=htmlspecialchars(strip_tags($this->service_name));
+  
+    // bind new values
+    $stmt->bindParam(':service_no', $this->service_no);
+    $stmt->bindParam(':service_name', $this->service_name);
+  
+    // execute the query
+    if($stmt->execute()){
+        return true;
+    }
+  
+    return false;
+}
 }
 ?>
 
