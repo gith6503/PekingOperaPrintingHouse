@@ -56,3 +56,21 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Payment details submitted successfully! If you top up by cash, please come to Peking Opera Printing house as stated in the location on the homepage when you are available and transfer your payment to the boss! Your amount balance will be updated once your payment is submitted!');
     });
 });
+function toggleRole() {
+    const roleButton = document.getElementById('roleButton');
+
+    // Check if the element is found
+    if (roleButton) {
+        // Toggle button text between "Boss" and "Customer"
+        if (roleButton.innerHTML.trim() === "Boss") {
+            roleButton.innerHTML = "Customer";
+            alert('Switched to Customer Mode');
+        } else {
+            roleButton.innerHTML = "Boss";
+            alert('Switched to Boss Mode');
+        }
+    } else {
+        console.error("Button with ID 'roleButton' not found.");
+    }
+}
+
