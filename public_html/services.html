@@ -3,8 +3,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +15,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
  
 </head>
 <body>
-
+<div class="switch-container">
+    <button id="roleButton" onclick="toggleRole()">Boss</button>
+</div>
 <header>
     <h1>Our Services</h1>
 </header>
-
 <nav role="navigation" aria-label="Main Navigation">
-    <ul>
+    <ol>
         <li><a href="index.html">Home</a></li>
         <br/>
         <li><a href="print-job.html">Submit Print Job</a></li>
@@ -38,7 +38,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <li><a href="faq.html">FAQ</a></li>
          <br/>
         <li><a href="topup.html">Top-Up</a></li>
-    </ul>
+    </ol>
 </nav>
      <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
 <br/>
@@ -303,6 +303,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
-
+<script src="java/services.js"></script>
 </body>
 </html>
