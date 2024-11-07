@@ -108,6 +108,28 @@ class Services {
   
     return false;
 }
+// delete the product
+function delete(){
+  
+    // delete query
+    $query = "DELETE FROM " . $this->table_name . " WHERE service_no = ?";
+  
+    // prepare query
+    $stmt = $this->conn->prepare($query);
+  
+    // sanitize
+    $this->id=htmlspecialchars(strip_tags($this->service_no));
+  
+    // bind id of record to delete
+    $stmt->bindParam(1, $this->service_no);
+  
+    // execute query
+    if($stmt->execute()){
+        return true;
+    }
+  
+    return false;
+}
 }
 ?>
 
