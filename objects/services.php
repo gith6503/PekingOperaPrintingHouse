@@ -16,7 +16,7 @@ class Services {
     // Read services method
     public function read() {
         // Select all query
-        $query = "SELECT service_no, service_name FROM " . $this->table_name;
+        $query = "SELECT service_no, service_name FROM " . $this->pekingoperaprintinghouse_db;
         
         // Prepare statement
         $stmt = $this->conn->prepare($query);
