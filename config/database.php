@@ -1,11 +1,9 @@
-
-
-      <?php
-     class Database{
+<?php
+class Database{
   
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "PekingOperaPrintingHouse";
+    private $db_name = "api_db";
     private $username = "root";
     private $password = "";
     public $conn;
@@ -26,5 +24,3 @@
     }
 }
 ?>
-      
-   
