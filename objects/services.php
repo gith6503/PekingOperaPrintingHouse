@@ -26,5 +26,33 @@ class Services {
 
         return $stmt;
     } // <- make sure this bracket is here to close the function
+    // create product
+function create(){
+  
+    // query to insert record
+    $query = "INSERT INTO
+                " . $this->pekingoperaprintinghouse_db . "
+            SET
+                service_no=:service_no, service_name=:service_name";
+  
+    // prepare query
+    $stmt = $this->conn->prepare($query);
+  
+    // sanitize
+    $this->service_no=htmlspecialchars(strip_tags($this->service_no));
+    $this->service_name=htmlspecialchars(strip_tags($this->service_name));
+  
+    // bind values
+    $stmt->bindParam(":service_no", $this->service_no);
+    $stmt->bindParam(":service_name", $this->service_name);
+  
+    // execute query
+    if($stmt->execute()){
+        return true;
+    }
+  
+    return false;
+      
+}
 } // <- make sure this bracket is here to close the class
 ?>
