@@ -16,7 +16,7 @@ class Services {
     // Read services method
     public function read() {
         // Select all query
-        $query = "SELECT service_no, service_name FROM " . $this->pekingoperaprintinghouse_db;
+        $query = "SELECT service_no, service_name FROM " . $this->table_name;
         
         // Prepare statement
         $stmt = $this->conn->prepare($query);
@@ -31,7 +31,7 @@ function create(){
   
     // query to insert record
     $query = "INSERT INTO
-                " . $this->pekingoperaprintinghouse_db . "
+                " . $this->table_name . "
             SET
                 service_no=:service_no, service_name=:service_name";
   
