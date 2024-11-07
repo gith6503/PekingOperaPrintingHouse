@@ -9,21 +9,20 @@ include_once '../shared/utilities.php';
 include_once '../config/database.php';
 include_once '../objects/services.php';
 
-// utilities
+// initialize utilities and database
 $utilities = new Utilities();
-
-// instantiate database and services object
 $database = new Database();
 $db = $database->getConnection();
 
-// initialize object
+// initialize services object
 $services = new Services($db);
 
-// query services with pagination
+// get pagination details from URL parameters
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
-$records_per_page = 10; // adjust as needed
+$records_per_page = 10;
 $from_record_num = ($records_per_page * $page) - $records_per_page;
 
+// query services with pagination
 $stmt = $services->readPaging($from_record_num, $records_per_page);
 $num = $stmt->rowCount();
 
@@ -39,16 +38,16 @@ if ($num > 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
-        $service_item = array(
+        $item = array(
             "service_no" => $service_no,
             "service_name" => $service_name
         );
 
-        array_push($services_arr["records"], $service_item);
+        array_push($services_arr["records"], $item);
     }
 
-    // include paging
-    $total_rows = $services->count();
+    // include paging details
+    $total_rows = $services->count() ?? 0;
     $page_url = "{$home_url}services/read_paging.php?";
     $paging = $utilities->getPaging($page, $total_rows, $records_per_page, $page_url);
     $services_arr["paging"] = $paging;
@@ -56,14 +55,13 @@ if ($num > 0) {
     // set response code - 200 OK
     http_response_code(200);
 
-    // make it JSON format
+    // output JSON response
     echo json_encode($services_arr);
 } else {
     // set response code - 404 Not found
     http_response_code(404);
 
-    // tell the user services do not exist
+    // output message if no services found
     echo json_encode(array("message" => "No services found."));
 }
 ?>
-
