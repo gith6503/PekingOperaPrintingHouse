@@ -14,13 +14,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
   
 </head>
 <body>
-
+<div class="switch-container">
+    <button id="roleButton" onclick="toggleRole()">Boss</button>
+</div>
 <header>
     <h1>Contact Us</h1>
 </header>
 
 <nav role="navigation" aria-label="Main Navigation">
-    <ul>
+    <ol>
         <li><a href="index.html">Home</a></li>
         <br/>
         <li><a href="print-job.html">Submit Print Job</a></li>
@@ -36,7 +38,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <li><a href="faq.html">FAQ</a></li>
          <br/>
         <li><a href="topup.html">Top-Up</a></li>
-    </ul>
+    </ol>
 </nav>
      <img src="img/unnamed.jpg" alt="Opera" width="100%" height="500"/>
      <br/><!-- comment -->
@@ -69,7 +71,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <input type="text" id="name" name="name" placeholder="" required>
 
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="" required>
+        <input type="text" id="email" name="email" placeholder="" required>
 
         <label for="subject">Subject</label>
         <input type="text" id="subject" name="subject" placeholder="" required>
