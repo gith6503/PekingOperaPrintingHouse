@@ -40,8 +40,8 @@ if ($num > 0) {
 
         $item = array(
             "customer_no" => $customer_no,
-            "customer_name" => $customer_name
-                 "customer_email" => $customer_email,
+            "customer_name" => $customer_name,
+            "customer_email" => $customer_email,
             "address" => $address,
              "status" => $status,
             "gender" => $gender
