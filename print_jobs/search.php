@@ -35,10 +35,22 @@ if($num > 0){
 
         // Create array for each print job
         $print_job_item = array(
+           "customer_no"=> $customer_no,
             "job_no" => $job_no,
-            "job_name" => $job_name,
-            "status" => $status,
-            "customer_no" => $customer_no,
+            "job_type" => $job_type,
+            "quantity"=> $quantity,
+            "job_status" => $job_status,
+            "cost" => $cost,
+            "size" => $size,
+            "shape" => $shape,
+            "sides"=> $sides,
+            "paper_size" => $paper_size,
+            "paper_type" => $paper_type,
+               "binding_type"=> $binding_type,
+            "print_type" => $print_type,
+            "service_no" => $service_no
+            
+        
         );
 
         array_push($print_jobs_arr["records"], $print_job_item);
