@@ -88,21 +88,31 @@ class Boss {
         return $stmt->execute();
     }
 
-    // Search services by name or number
     public function search($keywords) {
-        $query = "SELECT boss_no, boss_name, boss_email
-                  FROM " . $this->table_name . " 
-                  WHERE boss_name LIKE ? OR boss_no LIKE ? OR boss_email LIKE ?
-                  ORDER BY boss_no DESC";
-        $stmt = $this->conn->prepare($query);
+    // Prepare the SQL query with the search condition
+    $query = "SELECT boss_no, boss_name, boss_email
+              FROM " . $this->table_name . " 
+              WHERE boss_name LIKE :keywords 
+                 OR boss_no LIKE :keywords 
+                 OR boss_email LIKE :keywords
+              ORDER BY boss_no DESC";
 
-        $keywords = "%" . htmlspecialchars(strip_tags($keywords)) . "%";
-        $stmt->bindParam(1, $keywords);
-        $stmt->bindParam(2, $keywords);
+    // Prepare the statement
+    $stmt = $this->conn->prepare($query);
 
-        $stmt->execute();
-        return $stmt;
-    }
+    // Sanitize the keywords to prevent SQL injection
+    $keywords = "%" . htmlspecialchars(strip_tags($keywords)) . "%";
+
+    // Bind the parameters
+    $stmt->bindParam(":keywords", $keywords);
+
+    // Execute the statement
+    $stmt->execute();
+
+    // Return the statement (can be used in the controller to fetch results)
+    return $stmt;
+}
+
 
     // Read services with pagination
     public function readPaging($from_record_num, $records_per_page) {
