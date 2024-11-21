@@ -14,7 +14,7 @@ class Boss {
         $this->conn = $db;
     }
 
-    // Read all services
+    // Read all boss
     public function read() {
         $query = "SELECT boss_no, boss_name, boss_email FROM " . $this->table_name;
         $stmt = $this->conn->prepare($query);
@@ -22,7 +22,7 @@ class Boss {
         return $stmt;
     }
 
-    // Create a new service
+    // Create a new boss
     public function create() {
         $query = "INSERT INTO " . $this->table_name . "
                   SET boss_no = :boss_no, boss_name = :boss_name, boss_email = :boss_email";
@@ -41,7 +41,7 @@ class Boss {
         return $stmt->execute();
     }
 
-    // Read a single service by service_no
+    // Read a single service by boss_no
     public function readOne() {
         $query = "SELECT boss_no, boss_name, boss_email
                   FROM " . $this->table_name . "
@@ -60,7 +60,7 @@ class Boss {
         }
     }
 
-    // Update a service
+    // Update a boss
     public function update() {
         $query = "UPDATE " . $this->table_name . "
                   SET boss_name = :boss_name
@@ -77,7 +77,7 @@ class Boss {
         return $stmt->execute();
     }
 
-    // Delete a service
+    // Delete a boss
     public function delete() {
         $query = "DELETE FROM " . $this->table_name . " WHERE boss_no = ?";
         $stmt = $this->conn->prepare($query);
@@ -114,7 +114,7 @@ class Boss {
 }
 
 
-    // Read services with pagination
+    // Read boss with pagination
     public function readPaging($from_record_num, $records_per_page) {
         $query = "SELECT boss_no, boss_name, boss_email
                   FROM " . $this->table_name . "
