@@ -1,5 +1,5 @@
 <?php
-class Services {
+class Customer {
     // Database connection and table name
     private $conn;
     private $table_name = "customer";
