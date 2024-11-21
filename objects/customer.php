@@ -17,7 +17,7 @@ class Customer {
         $this->conn = $db;
     }
 
-    // Read all services
+    // Read all customer
     public function read() {
         $query = "SELECT customer_no, customer_name, customer_email, address, status, gender FROM " . $this->table_name;
         $stmt = $this->conn->prepare($query);
@@ -25,7 +25,7 @@ class Customer {
         return $stmt;
     }
 
-    // Create a new service
+    // Create a new customer
     public function create() {
         $query = "INSERT INTO " . $this->table_name . "
                   SET customer_no = :customer_no, customer_name = :customer_name, customer_email = :customer_email, address = :address, status = :status, gender = :gender";
@@ -50,7 +50,7 @@ class Customer {
         return $stmt->execute();
     }
 
-    // Read a single service by service_no
+    // Read a single service by customer_no
     public function readOne() {
         $query = "SELECT customer_no, customer_name, customer_email, address, status, gender
                   FROM " . $this->table_name . "
@@ -72,7 +72,7 @@ class Customer {
         }
     }
 
-    // Update a service
+    // Update a customer
     public function update() {
         $query = "UPDATE " . $this->table_name . "
                   SET customer_name = :customer_name,
@@ -100,7 +100,7 @@ class Customer {
         return $stmt->execute();
     }
 
-    // Delete a service
+    // Delete a customer
     public function delete() {
         $query = "DELETE FROM " . $this->table_name . " WHERE customer_no = ?";
         $stmt = $this->conn->prepare($query);
@@ -111,7 +111,7 @@ class Customer {
         return $stmt->execute();
     }
 
-    // Search services by name or number
+    // Search customer by name or number
  public function search($keywords) {
     $query = "SELECT customer_no, customer_name, customer_email, address, status, gender
               FROM " . $this->table_name . "
@@ -138,7 +138,7 @@ class Customer {
 }
 
 
-    // Read services with pagination
+    // Read customer with pagination
     public function readPaging($from_record_num, $records_per_page) {
         $query = "SELECT customer_no, customer_name, customer_email, address, status, gender
                   FROM " . $this->table_name . "
