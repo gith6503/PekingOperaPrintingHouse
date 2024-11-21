@@ -47,7 +47,7 @@ if(
   
   
     // create the product
-    if($services->create()){
+    if($customer->create()){
   
         // set response code - 201 created
         http_response_code(201);
