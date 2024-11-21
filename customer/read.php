@@ -48,7 +48,7 @@ if($num > 0){
             "gender" => $gender
         );
 
-        array_push($gender_arr["records"], $product_item);
+        array_push($customer_arr["records"], $product_item);
     }
 
     // set response code - 200 OK
