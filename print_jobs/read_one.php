@@ -27,10 +27,21 @@ $printJobs->readOne();
 if ($printJobs->job_name != null) {
     // create array
     $print_jobs_arr = array(
-        "job_no" => $printJobs->job_no,
-        "job_name" => $printJobs->job_name,
-        "status" => $printJobs->status,
-        "customer_no" => $printJobs->customer_no
+         "customer_no"=> $customer_no,
+            "job_no" => $job_no,
+            "job_type" => $job_type,
+            "quantity"=> $quantity,
+            "job_status" => $job_status,
+            "cost" => $cost,
+            "size" => $size,
+            "shape" => $shape,
+            "sides"=> $sides,
+            "paper_size" => $paper_size,
+            "paper_type" => $paper_type,
+               "binding_type"=> $binding_type,
+            "print_type" => $print_type,
+            "service_no" => $service_no
+            
 
     );
 
