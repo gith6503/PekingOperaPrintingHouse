@@ -16,7 +16,7 @@ include_once '../config/core.php';
 include_once '../config/database.php';
 include_once '../objects/customer.php';
   
-// instantiate database and product object
+// instantiate database and customer object
 $database = new Database();
 $db = $database->getConnection();
   
@@ -26,14 +26,14 @@ $customer = new customer($db);
 // get keywords
 $keywords=isset($_GET["s"]) ? $_GET["s"] : "";
   
-// query products
+// query customer
 $stmt = $customer->search($keywords);
 $num = $stmt->rowCount();
   
 // check if more than 0 record found
 if($num>0){
   
-    // products array
+    // customer array
     $customer_arr=array();
     $customer_arr["records"]=array();
   
@@ -59,7 +59,7 @@ if($num>0){
     // set response code - 200 OK
     http_response_code(200);
   
-    // show products data
+    // show customer data
     echo json_encode($customer_arr);
 }
   
