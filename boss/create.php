@@ -14,7 +14,7 @@ include_once '../objects/boss.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// instantiate orders object
+// instantiate boss object
 $boss = new Boss($db);
 
 // get posted data
@@ -26,13 +26,13 @@ if (
     !empty($data->boss_name) &&
     !empty($data->boss_email)
 ) {
-    // set orders property values
+    // set boss property values
     $boss->boss_no = $data->boss_no;
     $boss->boss_name = $data->boss_name;
     $boss->boss_email = $data->boss_email;
    
 
-    // create the order
+    // create the boss
     if ($boss->create()) {
         // set response code - 201 created
         http_response_code(201);
