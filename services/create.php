@@ -17,7 +17,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // get database connection
 include_once '../config/database.php';
   
-// instantiate product object
+// instantiate services object
 include_once '../objects/services.php';
   
 $database = new Database();
@@ -34,12 +34,12 @@ if(
     !empty($data->service_name)
 ){
   
-    // set product property values
+    // set services property values
     $services->service_no = $data->service_no;
     $services->service_name = $data->service_name;
   
   
-    // create the product
+    // create the service
     if($services->create()){
   
         // set response code - 201 created
@@ -49,7 +49,7 @@ if(
         echo json_encode(array("message" => "Services was created."));
     }
   
-    // if unable to create the product, tell the user
+    // if unable to create the serivces, tell the user
     else{
   
         // set response code - 503 service unavailable
