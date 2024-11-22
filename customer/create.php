@@ -17,7 +17,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // get database connection
 include_once '../config/database.php';
   
-// instantiate product object
+// instantiate customer object
 include_once '../objects/customer.php';
   
 $database = new Database();
@@ -38,7 +38,7 @@ if(
     !empty($data->gender)
 ){
   
-    // set product property values
+    // set customer property values
     $customer->customer_no = $data->customer_no;
     $customer->service_name = $data->customer_name;
      $customer->customer_email = $data->customer_email;
