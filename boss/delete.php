@@ -14,17 +14,17 @@ include_once '../objects/boss.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare orders object
+// prepare boss object
 $boss = new Boss($db);
 
 // get the posted data
 $data = json_decode(file_get_contents("php://input"));
 
-// set order ID to be deleted
+// set boss no to be deleted
 if (!empty($data->boss_no)) {
     $boss->boss_no = $data->boss_no;
 
-    // delete the order
+    // delete the boss
     if ($boss->delete()) {
         // set response code - 200 OK
         http_response_code(200);
