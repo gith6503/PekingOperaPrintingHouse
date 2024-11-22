@@ -14,7 +14,7 @@ include_once '../objects/boss.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare orders object
+// prepare boss object
 $boss = new Boss($db);
 
 // get the posted data
@@ -23,14 +23,14 @@ $data = json_decode(file_get_contents("php://input"));
 // ensure the required fields are set
 if (!empty($data->boss_no) && !empty($data->boss_name) && !empty($data->boss_email)) {
 
-    // set the properties of the order to be updated
+    // set the properties of the boss to be updated
 
     $boss->boss_no = $data->boss_no;
   
     $boss->boss_name = isset($data->boss_name) ? $data->boss_name : null;  // Optional field
     $boss->boss_email = isset($data->boss_email) ? $data->boss_email : null;  // Optional field
 
-    // update the order
+    // update the boss
     if ($boss->update()) {
         // set response code - 200 OK
         http_response_code(200);
