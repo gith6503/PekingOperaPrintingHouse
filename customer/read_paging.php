@@ -65,7 +65,7 @@ if ($num > 0) {
     // set response code - 404 Not found
     http_response_code(404);
 
-    // output message if no services found
+    // output message if no customer found
     echo json_encode(array("message" => "No customer found."));
 }
 ?>
