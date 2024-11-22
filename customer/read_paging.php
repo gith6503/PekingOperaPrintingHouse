@@ -14,7 +14,7 @@ $utilities = new Utilities();
 $database = new Database();
 $db = $database->getConnection();
 
-// initialize services object
+// initialize customer object
 $customer = new customer($db);
 
 // get pagination details from URL parameters
@@ -22,14 +22,14 @@ $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $records_per_page = 10;
 $from_record_num = ($records_per_page * $page) - $records_per_page;
 
-// query services with pagination
+// query customer with pagination
 $stmt = $customer->readPaging($from_record_num, $records_per_page);
 $num = $stmt->rowCount();
 
 // check if more than 0 record found
 if ($num > 0) {
 
-    // services array
+    // customer array
     $customer_arr = array();
     $customer_arr["records"] = array();
     $customer_arr["paging"] = array();
