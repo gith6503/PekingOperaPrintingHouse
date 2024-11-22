@@ -14,13 +14,13 @@ include_once '../objects/boss.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare orders object
+// prepare boss object
 $boss = new Boss($db);
 
 // set ID property of record to read
 $boss->boss_no = isset($_GET['boss_no']) ? $_GET['boss_no'] : die();
 
-// read the details of the order to be read
+// read the details of the boss to be read
 $boss->readOne();
 
 // check if `boss_no` exists
@@ -43,7 +43,7 @@ if ($boss->boss_no != null) {
     // set response code - 404 Not Found
     http_response_code(404);
 
-    // tell the user the order does not exist
+    // tell the user the boss does not exist
     echo json_encode(array("message" => "Boss does not exist."));
 }
 ?>
