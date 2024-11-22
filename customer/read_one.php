@@ -14,13 +14,13 @@ include_once '../objects/customer.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare services object
+// prepare customer object
 $customer = new customer($db);
 
 // set ID property of record to read
 $customer->customer_no = isset($_GET['customer_no']) ? $_GET['customer_no'] : die();
 
-// read the details of service to be read
+// read the details of customer to be read
 $customer->readOne();
 
 // check if service_name exists
@@ -44,7 +44,7 @@ if ($customer->customer_name != null) {
     // set response code - 404 Not found
     http_response_code(404);
 
-    // tell the user service does not exist
+    // tell the user customer does not exist
     echo json_encode(array("message" => "Customer does not exist."));
 }
 ?>
