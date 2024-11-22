@@ -46,7 +46,7 @@ if(
     $customer->gender = $data->gender;
   
   
-    // create the product
+    // create the customer
     if($customer->create()){
   
         // set response code - 201 created
@@ -56,7 +56,7 @@ if(
         echo json_encode(array("message" => "customer was created."));
     }
   
-    // if unable to create the product, tell the user
+    // if unable to create the customer, tell the user
     else{
   
         // set response code - 503 service unavailable
