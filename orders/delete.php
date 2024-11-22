@@ -20,7 +20,7 @@ $orders = new Orders($db);
 // get the posted data
 $data = json_decode(file_get_contents("php://input"));
 
-// set order ID to be deleted
+// set orders to be deleted
 if (!empty($data->job_no)) {
     $orders->job_no = $data->job_no;
 
