@@ -54,7 +54,7 @@ if($num > 0){
     // set response code - 200 OK
     http_response_code(200);
 
-    // show products data in JSON format
+    // show customer data in JSON format
     echo json_encode($customer_arr);
 }
 else {
