@@ -23,7 +23,7 @@ $customer->customer_no = isset($_GET['customer_no']) ? $_GET['customer_no'] : di
 // read the details of customer to be read
 $customer->readOne();
 
-// check if service_name exists
+// check if customer_name exists
 if ($customer->customer_name != null) {
     // create array
     $customer_arr = array(
