@@ -16,7 +16,7 @@ include_once '../config/core.php';
 include_once '../config/database.php';
 include_once '../objects/services.php';
   
-// instantiate database and product object
+// instantiate database and services object
 $database = new Database();
 $db = $database->getConnection();
   
@@ -26,14 +26,14 @@ $services = new services($db);
 // get keywords
 $keywords=isset($_GET["s"]) ? $_GET["s"] : "";
   
-// query products
+// query services
 $stmt = $services->search($keywords);
 $num = $stmt->rowCount();
   
 // check if more than 0 record found
 if($num>0){
   
-    // products array
+    // services array
     $services_arr=array();
     $services_arr["records"]=array();
   
@@ -65,7 +65,7 @@ else{
     // set response code - 404 Not found
     http_response_code(404);
   
-    // tell the user no products found
+    // tell the user no services found
     echo json_encode(
         array("message" => "No Service found.")
     );
