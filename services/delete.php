@@ -22,16 +22,16 @@ include_once '../objects/services.php';
 $database = new Database();
 $db = $database->getConnection();
   
-// prepare product object
+// prepare services object
 $services = new services($db);
   
-// get product id
+// get services no
 $data = json_decode(file_get_contents("php://input"));
   
-// set product id to be deleted
+// set services no to be deleted
 $services->service_no = $data->service_no;
   
-// delete the product
+// delete the services
 if($services->delete()){
   
     // set response code - 200 ok
