@@ -17,21 +17,21 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once '../config/database.php';
 include_once '../objects/customer.php';
 
-// instantiate database and product object
+// instantiate database and customer object
 $database = new Database();
 $db = $database->getConnection();
 
 // initialize object
 $customer = new customer($db);
 
-// query products
+// query customer
 $stmt = $customer->read();
 $num = $stmt->rowCount();
 
 // check if more than 0 record found
 if($num > 0){
   
-    // services array
+    // customer array
     $customer_arr = array();
     $customer_arr["records"] = array();
 
@@ -61,7 +61,7 @@ else {
     // set response code - 404 Not found
     http_response_code(404);
 
-    // tell the user no products found
+    // tell the user no customer found
     echo json_encode(array("message" => "No customer found."));
 }
 ?>
