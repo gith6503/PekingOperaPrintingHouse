@@ -14,7 +14,7 @@ $utilities = new Utilities();
 $database = new Database();
 $db = $database->getConnection();
 
-// initialize orders object
+// initialize boss object
 $boss = new Boss($db);
 
 // get pagination details from URL parameters
@@ -22,14 +22,14 @@ $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $records_per_page = 10;
 $from_record_num = ($records_per_page * $page) - $records_per_page;
 
-// query orders with pagination
+// query boss with pagination
 $stmt = $boss->readPaging($from_record_num, $records_per_page);
 $num = $stmt->rowCount();
 
 // check if more than 0 records found
 if ($num > 0) {
 
-    // orders array
+    // boss array
     $boss_arr = array();
     $boss_arr["records"] = array();
     $boss_arr["paging"] = array();
@@ -64,7 +64,7 @@ if ($num > 0) {
     // set response code - 404 Not found
     http_response_code(404);
 
-    // output message if no orders found
+    // output message if no boss found
     echo json_encode(array("message" => "No boss found."));
 }
 ?>
