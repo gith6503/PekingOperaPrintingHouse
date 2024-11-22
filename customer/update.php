@@ -23,7 +23,7 @@ $data = json_decode(file_get_contents("php://input"));
 // ensure the required fields are set
 if (!empty($data->customer_no) && !empty($data->customer_name) && !empty($data->customer_email) && !empty($data->address) && !empty($data->status) && !empty($data->gender)) {
 
-    // set the ID and properties of the service to be updated
+    // set the ID and properties of the customer to be updated
     $customer->customer_no = $data->customer_no;
     $customer->customer_name = $data->customer_name;
       $customer->customer_email = $data->customer_email;
