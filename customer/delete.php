@@ -25,13 +25,13 @@ $db = $database->getConnection();
 // prepare product object
 $customer = new customer($db);
   
-// get product id
+// get customer id
 $data = json_decode(file_get_contents("php://input"));
   
-// set product id to be deleted
+// set customer no to be deleted
 $customer->customer_no = $data->customer_no;
   
-// delete the product
+// delete the customer
 if($customer->delete()){
   
     // set response code - 200 ok
@@ -41,10 +41,10 @@ if($customer->delete()){
     echo json_encode(array("message" => "Customer was deleted."));
 }
   
-// if unable to delete the product
+// if unable to delete the customer
 else{
   
-    // set response code - 503 service unavailable
+    // set response code - 503 customer unavailable
     http_response_code(503);
   
     // tell the user
