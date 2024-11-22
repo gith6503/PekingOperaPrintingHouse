@@ -114,6 +114,20 @@ class Services {
         $stmt->execute();
         return $stmt;
     }
+   public function count() {
+    $query = "SELECT COUNT(*) as total_rows FROM " . $this->table_name;
+  
+    // Prepare and execute the query
+    $stmt = $this->conn->prepare($query);
+    $stmt->execute();
+
+    // Fetch the result
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Return the count
+    return $row['total_rows'];
+}
+
 }
 ?>
 
