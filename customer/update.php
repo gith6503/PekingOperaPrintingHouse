@@ -14,7 +14,7 @@ include_once '../objects/customer.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare services object
+// prepare customer object
 $customer = new customer($db);
 
 // get the posted data
@@ -31,7 +31,7 @@ if (!empty($data->customer_no) && !empty($data->customer_name) && !empty($data->
       $customer->status = $data->status;
     $customer->gender = $data->gender;
 
-    // update the service
+    // update the customer
     if ($customer->update()) {
         // set response code - 200 OK
         http_response_code(200);
