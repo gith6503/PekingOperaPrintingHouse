@@ -22,10 +22,10 @@ include_once '../objects/customer.php';
 $database = new Database();
 $db = $database->getConnection();
   
-// prepare product object
+// prepare customer object
 $customer = new customer($db);
   
-// get customer id
+// get customer no
 $data = json_decode(file_get_contents("php://input"));
   
 // set customer no to be deleted
