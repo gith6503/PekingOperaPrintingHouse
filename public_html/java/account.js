@@ -1,5 +1,3 @@
-// account.js
-
 function updateAccount() {
     // Get the input values
     let name = document.getElementById("newName").value.trim();
@@ -14,22 +12,8 @@ function updateAccount() {
     let occupation = document.getElementById("newOccupation").value.trim();
     
     // Perform validation for empty fields
-    if (!name || !dob ||  !address || !icNumber || !workplace || !religion || !telNo || !email || !occupation) {
+    if (!name || !dob || !address || !icNumber || !workplace || !religion || !telNo || !email || !occupation) {
         alert("Please fill in all required fields.");
-        return;
-    }
-    
-    // Validate age, height, and weight to ensure they are numbers and reasonable values
-    if (isNaN(age) || age <= 0 || age > 120) {
-        alert("Please enter a valid age.");
-        return;
-    }
-    if (isNaN(height) || height <= 0) {
-        alert("Please enter a valid height in cm.");
-        return;
-    }
-    if (isNaN(weight) || weight <= 0) {
-        alert("Please enter a valid weight in kg.");
         return;
     }
 
@@ -47,6 +31,7 @@ function updateAccount() {
 
     alert("Account updated successfully! Please check your account details below!");
 }
+
 function toggleRole() {
     const roleButton = document.getElementById('roleButton');
 
