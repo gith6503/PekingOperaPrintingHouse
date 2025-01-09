@@ -22,8 +22,7 @@
         <br/>
         <li><a href="print-job.html">Submit Print Job</a></li>
         <br/>
-        <li><a href="track-job.html">Track Job</a></li>
-         <br/>
+      
         <li><a href="account.html">Account Management</a></li>
          <br/>
         <li><a href="contact.html">Contact Us</a></li>
@@ -39,12 +38,13 @@
  
 <div class="content">
      <h1>Please update your account</h1>
+     <form id="updateAccountForm" method="POST" action="process_account.php" enctype="multipart/form-data">
      <br/>
             <h4>Enter Your name:</h4>
-            <input type="text" id="newName" placeholder="" required><br/>
+            <input type="text" id="newName" name="newName" placeholder="" required><br/>
             <br/>
             <h4>Select Your date of birth:</h4>
-            <input type="date" id="newDOB" placeholder="" required><br/>
+            <input type="date" id="newDOB" name="newDOB" placeholder="" required><br/>
              <br/>
              <h4>Select Sex:</h4><!-- comment --> 
              <select id="size" name="size" required="">
@@ -55,7 +55,7 @@
              <br/>
               
               <h4>What is your address?</h4>
-            <input type="text" id="newAddress" placeholder="" required><br/>
+            <input type="text" id="newAddress" name="newAddress" placeholder="" required><br/>
              <br/>
               <h4>Enter your IC Number:</h4>
             <input type="text" id="newIC" placeholder="" required><br/>
@@ -78,64 +78,10 @@
             <br/>
               <button onclick="updateAccount()">Update Account</button>
              <br/>
+             </form>
             <br/>
 </div>
-           
-</div>
-<div id="accountDetails">
-    <h2>Your Account Details</h2>
-    <table id="detailsTable">
-        
-        <tr>
-            <td>Name</td>
-            <td id="displayName">Nil</td>
-        </tr>
-        <tr>
-            <td>Date of Birth</td>
-            <td id="displayDOB">Nil</td>
-        </tr>
-        <tr>
-            <td>Sex</td>
-            <td id="displaySex">Nil</td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td id="displayAddress">Nil</td>
-        </tr>
-        <tr>
-            <td>IC No</td>
-            <td id="displayIC">Nil</td>
-        </tr>
-        <tr>
-            <td>School/Workplace</td>
-            <td id="displayWorkplace">Nil</td>
-        </tr>
-        <tr>
-            <td>Religion</td>
-            <td id="displayReligion">Nil</td>
-        </tr>
-          <tr>
-            <td>TelNo</td>
-            <td id="displayTelNo">Nil</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td id="displayEmail">Nil</td>
-        </tr>
-       
-        <tr>
-            <td>Occupation</td>
-            <td id="displayOccupation">Nil</td>
-        </tr>
-         <tr>
-            <td>Remaining Print Quota</td>
-            <td>Nil</td>
-        </tr>
-    </table>
-</div>
 
-        </div>
-    </div>
 <footer>
     <p>&copy; 2024 Peking Opera Printing House. All Rights Reserved.</p>
 </footer>
